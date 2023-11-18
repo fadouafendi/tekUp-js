@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<label for="inputString">Entrer une chaine:</label>
+<input type="text" id="st">
+<label for="inputString">Entrer un nombre :</label>
+<input type="text" id="n">
+<button onclick="newString()">Générer une nouvelle chaine</button>
+<p id="result"></p>
+<script>
+    function newString() {
+        let st = document.getElementById("st").value;
+        let n = parseInt(document.getElementById("n").value);
+        let st1;
+        if (n<=st.length){
+            st1 = st.substr(0, n)+ st.substr(st.length-n, st.length);
+            document.getElementById("result").innerHTML = st1;
+        }
+        else{
+            document.getElementById("result").innerHTML = "Erreur !";
+        }
+}
+</script>
+</body>
+</html>
